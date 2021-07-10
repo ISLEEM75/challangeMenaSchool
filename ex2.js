@@ -7,3 +7,13 @@ contains(array,0)=> return true
 contains(array,-1)=> return false 
 
 */
+
+function contains(arr, index) {
+    let newArr = arr.flat(Infinity);
+
+    if (newArr.indexOf(index) === -1) {
+        return false;
+    } else {
+        return true;
+    }
+}
