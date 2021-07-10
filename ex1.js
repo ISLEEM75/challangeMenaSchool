@@ -10,7 +10,16 @@ exp
 
 function reverseNestedArray(array) {
     //TODO
+    let newArr = [];
+    for (let i = 0; i >= array.length - 1; i++) {
+        if (Array.isArray(array[i])) {
+            array[i].reverse();
+            newArr.push(array[i]);
+        } else {
+            newArr.push(array[i]);
+        }
+    }
+    return newArr.reverse();
 }
-
 
 module.exports = reverseNestedArray;
