@@ -10,11 +10,13 @@ exp
 
 function reverseNestedArray(array) {
     //TODO
-    for (let i = 0; i >= array.length - 1; i++) {
-        if (Array.isArray(array[i])) {
+    for (let i = 0; i <= array.length; i++) {
+        if (typeof array[i] === "object") {
             reverseNestedArray(array[i]);
         }
+
         return array.reverse();
     }
 }
+console.log(reverseNestedArray([9, [5, [10, 30]], 6]));
 module.exports = reverseNestedArray;
